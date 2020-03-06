@@ -1,12 +1,11 @@
 CREATE TABLE IF NOT EXISTS museums (
     id SERIAL PRIMARY KEY,
     title TEXT,
-    duration TEXT,
     admission TEXT,
-    operating_days TEXT,
-    operating_time TEXT,
-    closed TEXT,
-    train TEXT,
+    opens TEXT,
+    closes TEXT,
+    opening_hours TEXT,
+    transport TEXT,
     located TEXT
 );
 
