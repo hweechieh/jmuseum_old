@@ -13,8 +13,9 @@ module.exports = (app, allModels) => {
    */
 
   // require the controller
-  const pokemonControllerCallbacks = require('./controllers/pokemon')(allModels);
+  // const pokemonControllerCallbacks = require('./controllers/pokemon')(allModels);
+  const artMuseumControllerCallbacks = require('./controllers/museum')(artMuseums)
 
-  app.get('/pokemons', pokemonControllerCallbacks.index);
+  app.get('/jmuseum', artMuseumControllerCallbacks.index);
   //app.get('/pokemons/:id', pokemons.getPokemon);
 };

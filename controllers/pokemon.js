@@ -8,7 +8,7 @@ module.exports = (db) => {
 
   let indexControllerCallback = (request, response) => {
       db.pokemon.getAll((error, allPokemon) => {
-        response.render('/jmuseum', { allPokemon });
+        response.render('/hahaha', { allPokemon });
       });
   };
 

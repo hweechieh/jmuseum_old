@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS museums (
+CREATE TABLE IF NOT EXISTS museum (
     id SERIAL PRIMARY KEY,
     title TEXT,
-    admission TEXT,
+    admission INT,
     opens TEXT,
     closes TEXT,
     opening_hours TEXT,
@@ -9,12 +9,12 @@ CREATE TABLE IF NOT EXISTS museums (
     located TEXT
 );
 
-CREATE TABLE IF NOT EXISTS categories (
+CREATE TABLE IF NOT EXISTS category (
     id SERIAL PRIMARY KEY,
     title TEXT
 );
 
-CREATE TABLE IF NOT EXISTS category_museums (
+CREATE TABLE IF NOT EXISTS category_museum (
     id SERIAL PRIMARY KEY,
     category_id INT,
     museum_id INT

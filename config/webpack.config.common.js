@@ -49,8 +49,12 @@ module.exports = {
         })
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader'
+        // need to add in the file type that I want to display for it to appear
+        test: /\.(eot|svg|ttf|woff|woff2|gif|png|jpg)$/,
+        loader: 'file-loader',
+        options: {
+          esModule: false,
+        },
       }
     ]
   },
