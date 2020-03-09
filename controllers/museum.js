@@ -6,9 +6,14 @@ module.exports = (db) => {
      * ===========================================
      */
   
-    let artMuseumControllerCallback = (request, response) => {
-        db.museum.getArtMuseums((error, artMuseums) => {
-          response.render('artmuseums', { artMuseums });
+    const artMuseumControllerCallback = (request, response) => {
+        db.museum.getArtMuseums((error, result) => {
+          if (error) {
+            console.error('there is an error:', error);
+            response.sendStatus(500);
+          } else {
+            response.send(result);
+          }
         });
     };
   

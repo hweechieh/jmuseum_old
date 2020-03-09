@@ -1,169 +1,168 @@
 -- museum
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located) 
-VALUES ('Kofukuji National Treasure Museum', '600', 'Daily', 'nil', '9am - 5pm', 'Kintetsu Nara Station', '48 Noboriōji-chō, Nara 630-8213');
+(title, admission, opens, closes, opening_hours, transport, located, region) 
+VALUES ('Kofukuji National Treasure Museum', '600', 'Daily', 'nil', '9am - 5pm', 'Kintetsu Nara Station', '48 Noboriōji-chō, Nara 630-8213', 'Kansai');
 
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located) 
-VALUES ('Nara National Museum', '520', 'Tue to Sun', 'Mon', '930am - 5pm', 'Kintetsu Nara Station', '50 Noboriōji-chō, Nara 630-8213');
+(title, admission, opens, closes, opening_hours, transport, located, region) 
+VALUES ('Nara National Museum', '520', 'Tue to Sun', 'Mon', '930am - 5pm', 'Kintetsu Nara Station', '50 Noboriōji-chō, Nara 630-8213', 'Kansai');
 
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Adachi Museum of Art', '2300', 'Daily', 'nil', '9am - 5pm', 'JR Yasugi Station', '320 Furukawacho, Yasugi, Shimane 692-0064');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Adachi Museum of Art', '2300', 'Daily', 'nil', '9am - 5pm', 'JR Yasugi Station', '320 Furukawacho, Yasugi, Shimane 692-0064', 'Chugoku');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located) 
-VALUES ('Kubota Itchiku Art Museum', '1300', 'Wed to Mon', 'Tue', '10am - 430pm', 'Kawaguchiko Station', '2255 Kawaguchi, Fujikawaguchiko, Minamitsuru District, Yamanashi 401-0304');
+(title, admission, opens, closes, opening_hours, transport, located, region) 
+VALUES ('Kubota Itchiku Art Museum', '1300', 'Wed to Mon', 'Tue', '10am - 430pm', 'Kawaguchiko Station', '2255 Kawaguchi, Fujikawaguchiko, Minamitsuru District, Yamanashi 401-0304', 'Chubu');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('National Art Center', '1700', 'Wed to Mon', 'Tue', '10am - 6pm', 'Nogizaka Station', '7-22-2 Roppongi, Minato-ku, Tokyo 106-8558');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('National Art Center', '1700', 'Wed to Mon', 'Tue', '10am - 6pm', 'Nogizaka Station', '7-22-2 Roppongi, Minato-ku, Tokyo 106-8558', 'Tokyo');
 
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Miho Museum', '1100', 'Tue to Sun', 'Mon', '10am - 5pm', 'Ishiyama Station', '300 Momodani, Tashiro Shigaraki Koka, Shiga 529-1814');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Miho Museum', '1100', 'Tue to Sun', 'Mon', '10am - 5pm', 'Ishiyama Station', '300 Momodani, Tashiro Shigaraki Koka, Shiga 529-1814', 'Kansai');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Otsuka Museum of Art', '3300', 'Tue to Sun', 'Mon', '930am - 5pm', 'Naruto Station', 'Fukuike-65-1 Narutocho Tosadomariura, Naruto, Tokushima 772-0053');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Otsuka Museum of Art', '3300', 'Tue to Sun', 'Mon', '930am - 5pm', 'Naruto Station', 'Fukuike-65-1 Narutocho Tosadomariura, Naruto, Tokushima 772-0053', 'Shikoku');
 
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Mori Art Museum', '1800', 'Daily', 'nil', '10am - 5pm', 'Roppongi Station', '6-10-1 Roppongi, Tokyo 106-6153');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Mori Art Museum', '1800', 'Daily', 'nil', '10am - 5pm', 'Roppongi Station', '6-10-1 Roppongi, Tokyo 106-6153', 'Tokyo');
+
+INSERT INTO museum
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('21st Century Museum of Contemporary Art', '450', 'Tue to Sun', 'Mon', '10am - 6pm', 'Kanazawa Station', '1-2-1 Hirosaka, Kanazawa City, Ishikawa 920-8509', 'Chubu');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('21st Century Museum of Contemporary Art', '450', 'Tue to Sun', 'Mon', '10am - 6pm', 'Kanazawa Station', '1-2-1 Hirosaka, Kanazawa City, Ishikawa 920-8509');
-
-
-INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Teshima Art Museum', '1570', 'Wed to Mon', 'Tue', '10am - 4pm', 'Takamatsu / Uno Port', '607 Teshimakarato, Tonosho, Shozu District, Kagawa 761-4662');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Teshima Art Museum', '1570', 'Wed to Mon', 'Tue', '10am - 4pm', 'Takamatsu / Uno Port', '607 Teshimakarato, Tonosho, Shozu District, Kagawa 761-4662', 'Shikoku');
 
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Chichu Art Museum', '2100', 'Tue to Sun', 'Mon', '10am - 5pm', 'Miyanoura Ferry Terminal', '3449-1, Naoshima, Kagawa District, Kagawa 761-3110');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Chichu Art Museum', '2100', 'Tue to Sun', 'Mon', '10am - 5pm', 'Miyanoura Ferry Terminal', '3449-1, Naoshima, Kagawa District, Kagawa 761-3110', 'Shikoku');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Inujima Seirensho Art Museum', '2100', 'Wed to Mon', 'Tue', '9am - 430pm', 'Takamatsu / Uno Port', '327-4 Inujima, Higashi Ward, Okayama 704-8153');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Inujima Seirensho Art Museum', '2100', 'Wed to Mon', 'Tue', '9am - 430pm', 'Takamatsu / Uno Port', '327-4 Inujima, Higashi Ward, Okayama 704-8153', 'Chugoku');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Tokyo National Museum', '620', 'Tue to Sun', 'Mon', '930am - 5pm', 'Ueno / Uguisudani Station', '13-9 Ueno Park, Taito-ku, Tokyo 110-8712');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Tokyo National Museum', '620', 'Tue to Sun', 'Mon', '930am - 5pm', 'Ueno / Uguisudani Station', '13-9 Ueno Park, Taito-ku, Tokyo 110-8712', 'Tokyo');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Edo-Tokyo Museum', '600', 'Tue to Sun', 'Mon', '930am - 530pm', 'Ryogoku Station', '1-4-1 Yokoami, Sumida-ku, Tokyo 130-0015');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Edo-Tokyo Museum', '600', 'Tue to Sun', 'Mon', '930am - 530pm', 'Ryogoku Station', '1-4-1 Yokoami, Sumida-ku, Tokyo 130-0015', 'Tokyo');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
+(title, admission, opens, closes, opening_hours, transport, located, region)
 VALUES ('Sengukan Museum', '300', 'Wed to Mon', 'Tue', '9am - 430pm', 'Ryogoku Station', '126-1
-Maeno, Toyokawa-cho, Ise City, Mie Pref. 516-0042');
+Maeno, Toyokawa-cho, Ise City, Mie 516-0042', 'Kansai');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Hiroshima Peace Memorial Museum', '200', 'Daily', 'nil', '830am - 6pm', 'Hiroshima Station', '1-1 Nakajimacho, Naka Ward, Hiroshima, 730-0811');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Hiroshima Peace Memorial Museum', '200', 'Daily', 'nil', '830am - 6pm', 'Hiroshima Station', '1-1 Nakajimacho, Naka Ward, Hiroshima 730-0811', 'Chugoku');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Nagasaki Atomic Bomb Museum', '0', 'Daily', 'nil', '830am - 630pm', 'JR Nagasaki Station', '7-8 Hiranomachi, Nagasaki, 852-8117');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Nagasaki Atomic Bomb Museum', '0', 'Daily', 'nil', '830am - 630pm', 'JR Nagasaki Station', '7-8 Hiranomachi, Nagasaki 852-8117', 'Kyushu');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Okinawa Prefectural Peace Memorial Museum', '300', 'Daily', 'nil', '9am - 5pm', 'Itoman Bus Terminal', '614-1 Mabuni, Itoman City, Okinawa, 901-0333');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Okinawa Prefectural Peace Memorial Museum', '300', 'Daily', 'nil', '9am - 5pm', 'Itoman Bus Terminal', '614-1 Mabuni, Itoman City, Okinawa 901-0333', 'Okinawa');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Chiran Tokko Museum', '500', 'Daily', 'nil', '9am - 5pm', 'Ibusuki Station', '17881 Kori, Chiran-cho, Minamikyushu-shi, Kagoshima-ken 897-0302');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Chiran Tokko Museum', '500', 'Daily', 'nil', '9am - 5pm', 'Ibusuki Station', '17881 Kori, Chiran-cho, Minamikyushu-shi, Kagoshima-ken 897-0302', 'Kyushu');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Fukui Prefectural Dinosaur Museum', '730', 'Daily', 'nil', '9am - 5pm', 'Katsuyama Station', '51-11 Terao, Muroko, Katsuyama, Fukui 911-8601');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Fukui Prefectural Dinosaur Museum', '730', 'Daily', 'nil', '9am - 5pm', 'Katsuyama Station', '51-11 Terao, Muroko, Katsuyama, Fukui 911-8601', 'Chubu');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('National Museum of Nature and Science', '630', 'Daily', 'nil', '9am - 5pm', 'JR Ueno Station', '7-20 Ueno Park, Taito-ku, Tokyo 110-8718');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('National Museum of Nature and Science', '630', 'Daily', 'nil', '9am - 5pm', 'JR Ueno Station', '7-20 Ueno Park, Taito-ku, Tokyo 110-8718', 'Tokyo');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('National Museum of Emerging Science', '630', 'Wed to Mon', 'Tue', '10am - 5pm', 'Telecom Center Station', '2-3-6 Aomi, Koto City, Tokyo 135-0064');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('National Museum of Emerging Science', '630', 'Wed to Mon', 'Tue', '10am - 5pm', 'Telecom Center Station', '2-3-6 Aomi, Koto City, Tokyo 135-0064', 'Tokyo');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('The Railway Museum', '1330', 'Wed to Mon', 'Tue', '10am - 6pm', 'Tetsudo Hakubutsukan Station', '3-47 Onari-cho, Omiya-ku, Saitama City, Saitama 330-0852');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('The Railway Museum', '1330', 'Wed to Mon', 'Tue', '10am - 6pm', 'Tetsudo Hakubutsukan Station', '3-47 Onari-cho, Omiya-ku, Saitama City, Saitama 330-0852', 'Kanto');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('SCMAGLEV and Railway Park', '1000', 'Wed to Mon', 'Tue', '10am - 530pm', 'Kinjofuto Station', '3-47 Onari-cho, 3-2-2 Kinjofuto, Minato Ward, Nagoya, Aichi 455-0848');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('SCMAGLEV and Railway Park', '1000', 'Wed to Mon', 'Tue', '10am - 530pm', 'Kinjofuto Station', '3-47 Onari-cho, 3-2-2 Kinjofuto, Minato Ward, Nagoya, Aichi 455-0848', 'Chubu');
 
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Kyoto Railway Museum', '1200', 'Thur to Tue', 'Wed', '10am - 530pm', 'Umekoji-Kyotonishi Station', 'Kankijicho, Shimogyo-ku, Kyoto');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Kyoto Railway Museum', '1200', 'Thur to Tue', 'Wed', '10am - 530pm', 'Umekoji-Kyotonishi Station', 'Kankijicho, Shimogyo-ku, Kyoto', 'Kansai');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Kobe Earthquake Memorial Museum', '600', 'Tue to Sun', 'Mon', '930am - 530pm', 'Iwaya Station', '1-5-2 Wakinohamakaigandori, Chuo Ward, Kobe, Hyogo 651-0073');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Kobe Earthquake Memorial Museum', '600', 'Tue to Sun', 'Mon', '930am - 530pm', 'Iwaya Station', '1-5-2 Wakinohamakaigandori, Chuo Ward, Kobe, Hyogo 651-0073', 'Kansai');
 
 
 INSERT INTO museum 
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Mount Unzen Disaster Memorial Hall', '1000', 'Daily', 'nil', '9am - 6pm', 'Central Shimabara', '1-1 Heisei-cho, Shimabara-shi, Nagasaki 855-0879');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Mount Unzen Disaster Memorial Hall', '1000', 'Daily', 'nil', '9am - 6pm', 'Central Shimabara', '1-1 Heisei-cho, Shimabara-shi, Nagasaki 855-0879', 'Kyushu');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Minamata Disease Municipal Museum', '500', 'Sun to Fri', 'Sat', '9am - 5pm', 'Shin-Minamata Station', '34 Fukuro, Minamata City, Kumamoto 867-0035');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Minamata Disease Municipal Museum', '500', 'Sun to Fri', 'Sat', '9am - 5pm', 'Shin-Minamata Station', '34 Fukuro, Minamata City, Kumamoto 867-0035', 'Kyushu');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Ghibli Museum', '1000', 'Wed to Mon', 'Tue', '10am - 6pm', 'JR Mitaka Station', '1-1-83 Shimorenjaku, Mitaka-shi, Tokyo 181-0013');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Ghibli Museum', '1000', 'Wed to Mon', 'Tue', '10am - 6pm', 'JR Mitaka Station', '1-1-83 Shimorenjaku, Mitaka-shi, Tokyo 181-0013', 'Tokyo');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Omiya Bonsai Art Museum', '310', 'Fri to Wed', 'Thu', '9am - 430pm', 'Toro Station', '2-24-3 Toro-cho, Kita Ward, Saitama City, Saitama 331-0804');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Omiya Bonsai Art Museum', '310', 'Fri to Wed', 'Thu', '9am - 430pm', 'Toro Station', '2-24-3 Toro-cho, Kita Ward, Saitama City, Saitama 331-0804', 'Kanto');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('The Sand Museum', '300', 'Mon to Sat', 'Sun', '9am - 6pm', 'Tottori Station', '2083-17 Yuyama, Fukube-cho, Tottori City, Tottori 689-0105');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('The Sand Museum', '300', 'Mon to Sat', 'Sun', '9am - 6pm', 'Tottori Station', '2083-17 Yuyama, Fukube-cho, Tottori City, Tottori 689-0105', 'Chugoku');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Sapporo Beer Museum', '0', 'Tue to Sun', 'Mon', '11am - 8pm', 'Sapporo Station', '9-1-1 Kita 7 Johigashi, Sapporo, Hokkaido 065-8633');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Sapporo Beer Museum', '0', 'Tue to Sun', 'Mon', '11am - 8pm', 'Sapporo Station', '9-1-1 Kita 7 Johigashi, Sapporo, Hokkaido 065-8633', 'Hokkaido');
 
 
 INSERT INTO museum
-(title, admission, opens, closes, opening_hours, transport, located)
-VALUES ('Toto Toilet Museum', '0', 'Tue to Sun', 'Mon', '10am - 5pm', 'Kawaraguchi-Mihagino Station', '2-1-1 Nakashima, Kokurakita Ward, Kitakyushu, Fukuoka 802-8601');
+(title, admission, opens, closes, opening_hours, transport, located, region)
+VALUES ('Toto Toilet Museum', '0', 'Tue to Sun', 'Mon', '10am - 5pm', 'Kawaraguchi-Mihagino Station', '2-1-1 Nakashima, Kokurakita Ward, Kitakyushu, Fukuoka 802-8601', 'Kyushu');
 
 
 -- category

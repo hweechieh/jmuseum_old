@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS museum (
     closes TEXT,
     opening_hours TEXT,
     transport TEXT,
-    located TEXT
+    located TEXT,
+    region TEXT
 );
 
 CREATE TABLE IF NOT EXISTS category (
