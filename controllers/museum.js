@@ -6,9 +6,9 @@ module.exports = (db) => {
      * ===========================================
      */
   
-    let indexControllerCallback = (request, response) => {
-        db.museum.getAll((error, allMuseum) => {
-          response.render('/jmuseum', { allMuseum });
+    let artMuseumControllerCallback = (request, response) => {
+        db.museum.getArtMuseums((error, artMuseums) => {
+          response.render('artmuseums', { artMuseums });
         });
     };
   
@@ -19,7 +19,7 @@ module.exports = (db) => {
      * ===========================================
      */
     return {
-      index: indexControllerCallback,
+      artMuseums: artMuseumControllerCallback,
     };
   
   }

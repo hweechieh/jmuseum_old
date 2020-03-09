@@ -62,8 +62,10 @@ pool.on('error', function (err) {
  */
 
 
-const allPokemonModelsFunction = require('./models/pokemon');
-const pokemonModelsObject = allPokemonModelsFunction( pool );
+// const allPokemonModelsFunction = require('./models/pokemon');
+// const pokemonModelsObject = allPokemonModelsFunction( pool );
+const artMuseumsModelsFunction = require('./models/museum');
+const museumModelsObject = artMuseumsModelsFunction( pool );
 
 
 
@@ -94,5 +96,5 @@ module.exports = {
    */
 
   // users: userModelsObject,
-  pokemon: pokemonModelsObject
+  museum: museumModelsObject,
 };
