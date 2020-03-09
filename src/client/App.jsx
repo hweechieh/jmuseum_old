@@ -9,7 +9,13 @@ class App extends React.Component {
     super();
     this.state = {
       artMuseums : [],
-      currentSelectedMuseum: null
+      // historyMuseums : [],
+      // warMuseums : [],
+      // scienceMuseums : [],
+      // disasterMuseums : [],
+      // othersMuseums : [],
+      
+      currentSelectedMuseum : null
     }
   }
 
