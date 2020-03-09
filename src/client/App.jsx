@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import LandingPageElements from './components/landingpage/landingpage';
+import PlotIcon from './images/plotIcon.png';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -51,7 +52,9 @@ class App extends React.Component {
   render() {
     const artmuseums = this.state.artMuseums.map((museum, index)=>{
       return (<div>
-                <a onClick={() => {this.getDetails(index)}}>{museum.title}</a>
+                {museum.title}
+                <a onClick={() => {this.getDetails(index)}}>
+                  <img src={PlotIcon}/></a>
               </div>)
     });
 
