@@ -1,8 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import LandingPageElements from './components/landingpage/landingpage';
-import Map from './components/mappage/map';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -11,7 +9,7 @@ class App extends React.Component {
     super();
     this.state = {
       artMuseums : [],
-      // currentSelectedMuseum: {title} 
+      currentSelectedMuseum: null
     }
   }
 
@@ -36,19 +34,38 @@ class App extends React.Component {
   }
 
 
+  // getDetails(index){
+  //   console.log(index);
+  //   const data = this.state.artMuseums[index]
+  //   this.setState({ currentSelectedMuseum : data })
+  //   // console.log(this.state);
+  // };
+
+
   render() {
     const artmuseums = this.state.artMuseums.map((museum, index)=>{
-        return (<div>
-                <p>{museum.title}</p>
-                </div>)
+      return (<div>
+                <a onClick={() => {this.getDetails(index)}}>{museum.title}</a>
+              </div>)
     });
 
+    // let museumdetails = this.state.currentSelectedMuseum
+    // if (museumdetails) {
+    // museumdetails = (<div>
+    //           <p>{museumdetails.admission}</p>
+    //         </div>)
+    // }
+
+    var container = {
+      width: "100%",
+      height: "auto"
+    } 
+
     return ( 
-      <div>
+      <div style={container}>
         <LandingPageElements />
-        <Link activeClass="active" to="map" spy={true} smooth={true} duration={500} onClick={() => {this.clickHandler('map')}}>Let's Explore!</Link>
-        {artmuseums}
-        <Element name="map"><Map /></Element>
+        <div style={{color: "white"}}>{artmuseums}</div>
+        {/* <div>{museumdetails}</div> */}
       </div>
     );
   }

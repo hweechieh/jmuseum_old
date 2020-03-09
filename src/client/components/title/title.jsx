@@ -10,10 +10,23 @@ export default class Title extends React.Component {
       width: "50%",
       marginLeft: "auto",
       marginRight: "auto",
+      paddingLeft: "320px",
       display: "flex",
     };
 
+    var circle = {
+      width: "55%"
+    };
+
+    var vertical = {
+      width: "70%"
+    };
+
     var title = {
+      width: "70%"
+    }
+
+    var title_container = {
       paddingLeft: "20px",
       paddingTop: "20px" 
     };
@@ -23,16 +36,16 @@ export default class Title extends React.Component {
       <div style={container}>
           <div>
             <div>
-              <img src={Circle} />
+              <img style={circle} src={Circle} />
             </div>
 
             <div>
-              <img src={VerticalText} />
+              <img style={vertical} src={VerticalText} />
             </div>
           </div>
 
-          <div style={title}>
-            <img src={TitleText} />
+          <div style={title_container}>
+            <img style={title} src={TitleText} />
           </div>
       </div>
     );

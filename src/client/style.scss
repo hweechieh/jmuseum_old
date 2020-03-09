@@ -1,17 +1,9 @@
 body { 
   background: url(../../images/bg.gif) no-repeat center center fixed; 
   background-attachment: fixed;
-  min-height: 500px;
+  min-height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-html body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-body{
-  padding:20px;
 }

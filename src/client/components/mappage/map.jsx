@@ -4,15 +4,29 @@ import MapImage from './images/map.png';
 export default class Map extends React.Component {
   render() {
 
-    var map = {
-      width: "30%",
-      height: "auto"
+    var container = {
+      width: "100%",
+      height: "1080px"
     };
 
+    var map = {
+      width: "70%",
+      height: "auto",
+      position: "absolute",
+      zIndex: "2",
+      paddingLeft: "300px",
+      paddingTop: "100px"
+    };
+
+    //  need to try to see if it works
+    var opacity = {
+      class: "w3-animate-opacity"
+    }
+
     return ( 
-      <div>
-          <div style={map} >
-            <img src={MapImage} />
+      <div style={container}>
+          <div>
+            <img style={ map } className={ opacity } src={ MapImage } />
           </div>
       </div>
     );
