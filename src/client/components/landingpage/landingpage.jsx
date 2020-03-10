@@ -12,6 +12,38 @@ import Map from '../mappage/map';
 
 
 export default class LandingPageElements extends React.Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+        clicked : false,
+        artmuseums : []
+    }
+}
+
+  clickHandler(){
+    console.log("clicking");
+    this.setState({clicked : true})
+  }
+
+
+      getArtMuseums(){
+  
+      const url = '/artmuseums';
+  
+      axios.get(url)
+        .then((response) => {
+          
+          const data = response.data
+          this.setState({ artmuseums : data })
+          // console.log(this.state);
+        }).catch((error)=>{
+          console.log(error);
+        })
+    }
+
+
   render() {
     var leftClouds = {
       display: "flex",

@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import LandingPageElements from './components/landingpage/landingpage';
-import PlotIcon from './images/plotIcon.png';
+// import PlotIcon from './images/plotIcon.png';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -9,7 +9,6 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      artMuseums : [],
       // historyMuseums : [],
       // warMuseums : [],
       // scienceMuseums : [],
@@ -18,26 +17,6 @@ class App extends React.Component {
       
       currentSelectedMuseum : null
     }
-  }
-
-  clickHandler(){
-    console.log("clicking");
-    this.getArtMuseums();
-  }
-
-  getArtMuseums(){
-
-    const url = '/artmuseums';
-
-    axios.get(url)
-      .then((response) => {
-        
-        const data = response.data
-        this.setState({ artMuseums : data })
-        // console.log(this.state);
-      }).catch((error)=>{
-        console.log(error);
-      })
   }
 
 
@@ -50,13 +29,7 @@ class App extends React.Component {
 
 
   render() {
-    const artmuseums = this.state.artMuseums.map((museum, index)=>{
-      return (<div>
-                {museum.title}
-                <a onClick={() => {this.getDetails(index)}}>
-                  <img src={PlotIcon}/></a>
-              </div>)
-    });
+
 
     // let museumdetails = this.state.currentSelectedMuseum
     // if (museumdetails) {
@@ -73,7 +46,7 @@ class App extends React.Component {
     return ( 
       <div style={container}>
         <LandingPageElements />
-        <div style={{color: "white"}}>{artmuseums}</div>
+        {/* <div style={{color: "white"}}>{artmuseums}</div> */}
         {/* <div>{museumdetails}</div> */}
       </div>
     );

@@ -2,16 +2,15 @@ import React from 'react';
 import ArtIcon from './articon.png';
 
 export default class Art extends React.Component {
-
-    constructor() {
-        super();
-
-        this.state = {
-            artSelected : false
-        }
-    }
-
   render() {
+
+    // const artmuseums = this.state.artMuseums.map((museum, index)=>{
+    //   return (<div>
+    //             {museum.title}
+    //             <a onClick={() => {this.getDetails(index)}}>
+    //               <img src={PlotIcon}/></a>
+    //           </div>)
+    // });
 
     var art_icon = {
       float : "right",
