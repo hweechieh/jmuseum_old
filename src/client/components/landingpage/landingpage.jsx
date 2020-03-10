@@ -8,7 +8,9 @@ import Begin from './beginicon.png';
 import Title from '../title/title';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import Map from '../mappage/map';
-// import axios from 'axios';
+import MapImage from '../mappage/images/map.png';
+import PlotIcon from '../../../../images/ploticon.png';
+import axios from 'axios';
 
 
 export default class LandingPageElements extends React.Component {
@@ -22,26 +24,24 @@ export default class LandingPageElements extends React.Component {
     }
 }
 
-  clickHandler(){
-    console.log("clicking");
-    this.setState({clicked : true})
+  getArtMuseums(){
+    const url = '/artmuseums';
+
+    axios.get(url)
+      .then((response) => {
+        
+        const data = response.data
+        this.setState({ artmuseums : data })
+      }).catch((error)=>{
+        console.log(error);
+      })
   }
 
-
-      getArtMuseums(){
-  
-      const url = '/artmuseums';
-  
-      axios.get(url)
-        .then((response) => {
-          
-          const data = response.data
-          this.setState({ artmuseums : data })
-          // console.log(this.state);
-        }).catch((error)=>{
-          console.log(error);
-        })
-    }
+  clickHandler(){
+    console.log("clicking");
+    this.setState({clicked : true});
+    this.getArtMuseums();
+  }
 
 
   render() {
@@ -93,6 +93,16 @@ export default class LandingPageElements extends React.Component {
       outline: "none"
     };
 
+    var map = ''
+    if ( this.state.clicked === true ) {
+      map = <Map />
+    }
+
+  const artmuseums = this.state.artmuseums.map(( museum, index )=>{
+    return (<div>
+      <area shape="circle" coords={ museum.xaxis, museum.yaxis } src={ PlotIcon } alt={ museum.title }></area></div>)
+    });
+
     return ( 
       <div>
 
@@ -103,11 +113,27 @@ export default class LandingPageElements extends React.Component {
 
         <div><img style={ rightCloud } src={ CloudRight } /></div>
         <div><img style={ lowopac_01 } src={ LowOpacCloud01 } /></div>
+
         <Title />
+
         <div><img style={ lowopac_02 } src={ LowOpacCloud02 } /></div>
         <Link activeClass="active" to="map" spy={true} smooth={true} duration={500} onClick={() => {this.clickHandler()}}><div style={ begin_align }><input style={ begin } type="image" src={ Begin } /></div>
+
         </Link>
-        <Element name="map"><Map /></Element>
+
+        {/* Important to leave the <Element> tag outside as the library will be looking for it */}
+        {/* If otherwise, it will render on first click then scroll on second */}
+        <Element name="map">{map}</Element>
+
+        {artmuseums}
+
+        {/* <div>
+          <img src={ MapImage } width="1289px" height="1300px" alt="Japan" useMap="#japanmap" />
+          <map name="japanmap">
+            { artmuseums }
+          </map>
+        </div> */}
+
       </div>
     );
   }

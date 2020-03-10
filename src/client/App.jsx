@@ -1,8 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import LandingPageElements from './components/landingpage/landingpage';
-// import PlotIcon from './images/plotIcon.png';
-import axios from 'axios';
+// import axios from 'axios';
 
 class App extends React.Component {
 
@@ -19,7 +18,6 @@ class App extends React.Component {
     }
   }
 
-
   // getDetails(index){
   //   console.log(index);
   //   const data = this.state.artMuseums[index]
@@ -29,8 +27,6 @@ class App extends React.Component {
 
 
   render() {
-
-
     // let museumdetails = this.state.currentSelectedMuseum
     // if (museumdetails) {
     // museumdetails = (<div>
