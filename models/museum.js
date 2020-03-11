@@ -10,7 +10,7 @@ module.exports = (dbPoolInstance) => {
 // Selecting museums under Art category
 let getArtMuseums = (callback) => {
 
-  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 1';
+  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located, museum.xaxis, museum.yaxis FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 1';
 
   dbPoolInstance.query(query, (error, queryResult) => {
     if( error ){
@@ -36,7 +36,7 @@ let getArtMuseums = (callback) => {
 // Selecting museums under History category
 let getHistoryMuseums = (callback) => {
 
-  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 2';
+  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located, museum.xaxis, museum.yaxis FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 2';
 
   dbPoolInstance.query(query, (error, queryResult) => {
     if( error ){
@@ -62,7 +62,7 @@ let getHistoryMuseums = (callback) => {
 // Selecting museums under War category
 let getWarMuseums = (callback) => {
 
-  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 3';
+  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located, museum.xaxis, museum.yaxis FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 3';
 
   dbPoolInstance.query(query, (error, queryResult) => {
     if( error ){
@@ -88,7 +88,7 @@ let getWarMuseums = (callback) => {
 // Selecting museums under Science category
 let getScienceMuseums = (callback) => {
 
-  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 4';
+  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located, museum.xaxis, museum.yaxis FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 4';
 
   dbPoolInstance.query(query, (error, queryResult) => {
     if( error ){
@@ -114,7 +114,7 @@ let getScienceMuseums = (callback) => {
 // Selecting museums under Disaster category
 let getDisasterMuseums = (callback) => {
 
-  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 5';
+  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located, museum.xaxis, museum.yaxis FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 5';
 
   dbPoolInstance.query(query, (error, queryResult) => {
     if( error ){
@@ -140,7 +140,7 @@ let getDisasterMuseums = (callback) => {
 // Selecting museums under Others category
 let getOthersMuseums = (callback) => {
 
-  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 6';
+  let query = 'SELECT category_museum.category_id, museum.title, museum.admission, museum.opens, museum.closes, museum.opening_hours, museum.transport, museum.located, museum.xaxis, museum.yaxis FROM museum INNER JOIN category_museum ON (category_museum.museum_id = museum.id) WHERE category_museum.category_id = 6';
 
   dbPoolInstance.query(query, (error, queryResult) => {
     if( error ){

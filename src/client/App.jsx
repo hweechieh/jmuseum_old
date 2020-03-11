@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import LandingPageElements from './components/landingpage/landingpage';
+// import PlotIcon from './ploticon.png';
 // import axios from 'axios';
 
 class App extends React.Component {
@@ -42,6 +43,7 @@ class App extends React.Component {
     return ( 
       <div style={container}>
         <LandingPageElements />
+        {/* <img src={ PlotIcon } /> */}
         {/* <div style={{color: "white"}}>{artmuseums}</div> */}
         {/* <div>{museumdetails}</div> */}
       </div>

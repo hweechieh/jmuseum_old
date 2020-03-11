@@ -1,5 +1,5 @@
 import React from 'react';
-import MapImage from './images/map.png';
+// import MapImage from './images/map.png';
 import SideNav from './../sidenav/sidenav';
 
 export default class Map extends React.Component {
@@ -26,10 +26,10 @@ export default class Map extends React.Component {
 
     return ( 
       <div style={container}>
-          <div>
+          <div style={{position: "relative"}}>
             <img style={ map } className={ opacity } src={ MapImage } />
-          </div>
-
+            {this.props.am}
+          </div>  
           <div>
             <SideNav />
           </div>
