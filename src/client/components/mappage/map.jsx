@@ -1,10 +1,8 @@
-import React from 'react';
-// import MapImage from './images/map.png';
-import SideNav from './../sidenav/sidenav';
+import React from "react";
+// import SideNav from "./../sidenav/sidenav";
 
 export default class Map extends React.Component {
   render() {
-
     var container = {
       width: "100%",
       height: "1080px"
@@ -19,20 +17,10 @@ export default class Map extends React.Component {
       paddingTop: "100px"
     };
 
-    //  need to try to see if it works
-    var opacity = {
-      class: "w3-animate-opacity"
-    }
-
-    return ( 
+    return (
       <div style={container}>
-          <div style={{position: "relative"}}>
-            <img style={ map } className={ opacity } src={ MapImage } />
-            {this.props.am}
-          </div>  
-          <div>
-            <SideNav />
-          </div>
+        <div style={{ position: "relative" }}></div>
+        <div>{/* <SideNav /> */}</div>
       </div>
     );
   }

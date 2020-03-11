@@ -1,51 +1,25 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
-import LandingPageElements from './components/landingpage/landingpage';
-// import PlotIcon from './ploticon.png';
-// import axios from 'axios';
+import React from "react";
+import { hot } from "react-hot-loader";
+import LandingPageElements from "./components/landingpage/landingpage";
 
 class App extends React.Component {
-
-  constructor(){
+  constructor() {
     super();
+
     this.state = {
-      // historyMuseums : [],
-      // warMuseums : [],
-      // scienceMuseums : [],
-      // disasterMuseums : [],
-      // othersMuseums : [],
-      
-      currentSelectedMuseum : null
-    }
+      currentSelectedMuseum: null
+    };
   }
 
-  // getDetails(index){
-  //   console.log(index);
-  //   const data = this.state.artMuseums[index]
-  //   this.setState({ currentSelectedMuseum : data })
-  //   // console.log(this.state);
-  // };
-
-
   render() {
-    // let museumdetails = this.state.currentSelectedMuseum
-    // if (museumdetails) {
-    // museumdetails = (<div>
-    //           <p>{museumdetails.admission}</p>
-    //         </div>)
-    // }
-
     var container = {
       width: "100%",
       height: "auto"
-    } 
+    };
 
-    return ( 
+    return (
       <div style={container}>
         <LandingPageElements />
-        {/* <img src={ PlotIcon } /> */}
-        {/* <div style={{color: "white"}}>{artmuseums}</div> */}
-        {/* <div>{museumdetails}</div> */}
       </div>
     );
   }
