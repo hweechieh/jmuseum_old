@@ -52,6 +52,6 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "engines": {
-    "node": "^6.6.0"
+    "node": "^6.13.7"
   }
 }
