@@ -19,6 +19,7 @@ import LowOpacCloud02 from "./clouds/cloud_lowopac_02.png";
 import Begin from "./beginicon.png";
 
 import Title from "../title/title";
+import SmallTitle from "./small_title.png";
 
 export default class LandingPageElements extends React.Component {
   constructor() {
@@ -26,8 +27,10 @@ export default class LandingPageElements extends React.Component {
 
     this.state = {
       clicked: false,
-      artmuseums: []
+      artmuseums: [],
+      selectedMuseum: null
     };
+    this.selectHandler = this.selectHandler.bind(this);
   }
 
   componentDidMount() {
@@ -53,6 +56,13 @@ export default class LandingPageElements extends React.Component {
     console.log("clicking");
     this.setState({ clicked: true });
     this.getArtMuseums();
+  }
+
+  selectHandler(e) {
+    var selectedMuseum = this.state.artmuseums[e.target.index + 1];
+    console.log(e.target.index + 2);
+    console.log(selectedMuseum);
+    this.setState({ selectedMuseum: selectedMuseum });
   }
 
   render() {
@@ -105,24 +115,90 @@ export default class LandingPageElements extends React.Component {
       paddingTop: "80px"
     };
 
+    var small_title = {
+      width: "10%",
+      height: "auto",
+      paddingRight: "30px",
+      paddingTop: "100px"
+    };
+
+    var map_details = {
+      fontFamily: "montserrat, sans-serif",
+      fontSize: "14px",
+      color: "#fff3c3",
+      fontWeight: "medium",
+      paddingTop: "-10px"
+    };
+
+    var bgImage = {
+      position: "fixed"
+    };
+
+    var descrip = {
+      fontFamily: "montserrat, sans-serif",
+      fontSize: "14px",
+      color: "#ffde5e",
+      fontStyle: "italic"
+    };
+
+    var title = {
+      fontFamily: "montserrat, sans-serif",
+      fontSize: "16px",
+      color: "#ffdf8d",
+      fontWeight: "bold",
+      textTransform: "uppercase",
+      letterSpacing: "5px",
+      paddingBottom: "10px"
+    };
+
     const BackgroundImage = () => {
       const [image] = useImage("https://i.imgur.com/rBPOm8e.png");
       return (
-        <Image image={image} width={820.995} height={828.1} x={255} y={54} />
+        <Image
+          image={image}
+          width={820.995}
+          height={828.1}
+          x={255}
+          y={54}
+          style={bgImage}
+        />
       );
     };
 
     const PlotIcon = () => {
       const [image] = useImage("https://i.imgur.com/M5Z3qP3.png");
+      const imageRef = React.useRef();
       return this.state.artmuseums.map((museum, index) => {
         return (
           <Image
             key={index}
+            ref={imageRef}
             image={image}
-            width={9.5}
-            height={15}
+            width={19}
+            height={30}
             x={museum.xaxis * 0.87 + 10}
-            y={museum.yaxis * 0.85 - 100}
+            y={museum.yaxis * 0.85 - 75}
+            onClick={e => this.selectHandler(e)}
+            onMouseOver={e => {
+              // const TitleOfMuseum = museum.title;
+              //   .title);
+              // const admission = this.state.artmuseums[e.target.index - 1]
+              //   .admission;
+              // const closed = this.state.artmuseums[e.target.index - 1].closes;
+              // const openinghrs = this.state.artmuseums[e.target.index - 1]
+              //   .opening_hours;
+              // const transport = this.state.artmuseums[e.target.index - 1]
+              //   .transport;
+              // const located = this.state.artmuseums[e.target.index - 1].located;
+              // console.log(this);
+              // console.log(e.target.index);
+              // console.log(e.target.attrs.x);
+              // console.log(e.target.attrs.y);
+              // console.log(this.state.artmuseums[e.target.index - 1].xaxis);
+              // console.log(this.state.artmuseums[e.target.index - 1].yaxis);
+              // console.log(this.state.artmuseums[e.target.index - 1].title);
+            }}
+            // value=
           />
         );
       });
@@ -172,6 +248,34 @@ export default class LandingPageElements extends React.Component {
         </Link>
 
         <Element name="map">{map}</Element>
+
+        {this.state.selectedMuseum ? (
+          <div
+            style={{
+              position: "absolute",
+              paddingLeft: "100px",
+              paddingTop: "100px"
+            }}
+          >
+            <h4 style={title}>{this.state.selectedMuseum.title}</h4>
+
+            <h5 style={descrip}>Standard Admission Fee</h5>
+            <h5 style={map_details}>
+              {this.state.selectedMuseum.admission + "yen"}
+            </h5>
+
+            <h5 style={descrip}>Operating Hours</h5>
+            <h5 style={map_details}>
+              {this.state.selectedMuseum.opening_hours}
+            </h5>
+
+            <h5 style={descrip}>Nearest Train Station / Port</h5>
+            <h5 style={map_details}>{this.state.selectedMuseum.transport}</h5>
+
+            <h5 style={descrip}>Address</h5>
+            <h5 style={map_details}>{this.state.selectedMuseum.located}</h5>
+          </div>
+        ) : null}
 
         <Stage width={window.innerWidth} height={window.innerHeight}>
           <Layer>
